@@ -3,15 +3,15 @@
 import { useEffect,useState } from "react";
 import { VscError} from 'react-icons/vsc';
 import CartItem from "../components/cart-item";
-
+import { Link } from "react-router-dom";
 
 const CartItems= [
   {
     productId: "non-veg",
-    photo:'https://www.asligrill.com/wp-content/uploads/2023/12/what-is-shawarama-mobile.jpg',
+    photo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3CzDz1D9YoQZy-xo14rQxAm-GGNkGpTmgAl8d46JOQ&s',
     name: "Chicken Shawrma",
     price:130,
-    quanity:1,
+    quanity:7,
     stock:10,
   },
 ];
@@ -53,11 +53,11 @@ return()=>{
 <main>
 
 
-{CartItems.map((i,idx) =>(
+{ CartItems.length > 0? CartItems.map((i,idx) =>(
     
    <CartItem key={idx} cartItem={i}/>
 
-  ))
+  )) :(<h1>No Items Added</h1>)
 }
 
 
@@ -74,7 +74,7 @@ return()=>{
 <p>tax:Rs{tax}</p>
 <p>
 
-Dicount -<em>Rs{discount}</em>
+Dicount -<em className="red">Rs{discount}</em>
 </p>
 <p>
   <b>
@@ -101,6 +101,9 @@ onChange={(e)=> setcuponCode(e.target.value)}
     Invalid Cupon <VscError /> 
     </span>
   ))
+}
+{
+  CartItems.length >0 && <Link t0 ="/shipping">Checkout</Link>
 }
 
 

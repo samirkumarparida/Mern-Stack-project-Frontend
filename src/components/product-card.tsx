@@ -27,6 +27,8 @@ const ProductCard = ({
 
 
 <div>
+
+  
   <button onClick={() => handler()}>
     <FaPlus />
     </button>
