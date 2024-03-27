@@ -12,12 +12,13 @@ const Home = () => {
 
     <h1>Latest Products 
 
-      <Link to="/serach" className="findmore">
+      <Link to="/search" className="findmore">
         More</Link>
     </h1>
 
 <main>
-<ProductCard ProductId="hgcggf" 
+<ProductCard 
+ProductId="hgcggf" 
 name= "Chicken Shawrma" 
 price={130} 
 stock={456} 

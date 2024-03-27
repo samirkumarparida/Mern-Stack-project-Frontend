@@ -67,6 +67,7 @@ return()=>{
 
 
 </main>
+
 <aside>
 
 <p>Subtotal:Rs{Subtotal}</p>
@@ -103,11 +104,12 @@ onChange={(e)=> setcuponCode(e.target.value)}
   ))
 }
 {
-  CartItems.length >0 && <Link t0 ="/shipping">Checkout</Link>
+  CartItems.length >0 &&<Link to ="/shipping">Checkout</Link>
 }
 
 
 </aside>
+
   </div>);
   
 };

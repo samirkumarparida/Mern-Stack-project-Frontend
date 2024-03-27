@@ -4,9 +4,19 @@ import { lazy , Suspense } from "react";
 import Loader from "./components/loader";
 import Header from "./components/header";
 
+
+
+
+
 const Home = lazy (() => import ("./pages/home"));
 const Search  = lazy (()=> import ("./pages/search"));
 const Cart =lazy(()=> import ("./pages/cart")) ;
+const Shipping=lazy(()=> import ("./pages/shipping"));
+const Login=lazy(()=> import ("./pages/login"));
+const Orders=lazy(()=> import ("./pages/orders"));
+const OrderDetails=lazy(()=> import ("./pages/order-details"));
+
+
 
 //Admin Routesimporting//
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -41,6 +51,21 @@ const App = () => {
   <Route path="/" element = {<Home />} />
   <Route path="/Search" element = {<Search />} />
   <Route path="/Cart" element = {<Cart />} />
+  {/* Not In user Routes */}
+
+<Route path="/login" element={<Login/>} />
+
+
+
+  {/* {logge3d In User Routes} */}
+
+  <Route>
+  <Route path="/shipping" element = {<Shipping />} />
+  <Route path="/orders" element = {<Orders />} />
+  <Route path="/order/:id" element = {<OrderDetails />} />
+
+  </Route>
+
 
 
 

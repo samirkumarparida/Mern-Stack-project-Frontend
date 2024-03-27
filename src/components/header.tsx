@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaSearch, FaShoppingBag, FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const user = {_id: "gfdd",role:"admin"};
+const user = {_id: "sdsf",role:"admin"};
 
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
   return (
 <nav className="header">
     <Link onClick={() => setIsOpen(false)} to={"/"}>
-        Home</Link>
+        HOME</Link>
 <Link onClick={() => setIsOpen(false)}to={"/search"}>
     <FaSearch />
 </Link>
